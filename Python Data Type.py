@@ -70,5 +70,4 @@ def eight(x):
     lenq = len(l[0])
     return 'Najdłuższy wyraz to: ',l[0],'      A jego długość to: ',lenq
 
-
 print(eight('erqwewqe,wqeqwewq,wqeqwe,qweqwe'))
