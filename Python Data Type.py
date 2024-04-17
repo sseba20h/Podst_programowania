@@ -62,9 +62,13 @@ def seven(x):
         x = x
         return x
 
+#8. Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+
+def eight(x):
+    l = x.split(',')
+    l.sort()
+    lenq = len(l[0])
+    return 'Najdłuższy wyraz to: ',l[0],'      A jego długość to: ',lenq
 
 
-
-
-
-print(two('qwertyuiop'))
+print(eight('erqwewqe,wqeqwewq,wqeqwe,qweqwe'))
