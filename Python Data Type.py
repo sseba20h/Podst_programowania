@@ -6,9 +6,15 @@ def one(abc):
 
 #2. Write a Python program to count the number of characters (character frequency) in a string.
 
-#abc = input("Podaj frazę do sprawdzenia:  ")
-
-#print (abc))
+def two(q):
+    dict = {}
+    for n in q:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
 
 #3. Write a Python program to get a string made of the first 2 and last 2 characters of a given string. If the string length is less than 2, return the empty string instead.
 
@@ -52,6 +58,8 @@ def seven(x):
     poor = x.find('poor')
     if poor > not_a and not_a > 0 and poor > 0:
         x = x.replace(x[not_a:(poor+4)], 'good')
+    else:
+        x = x
         return x
 
 
@@ -59,4 +67,4 @@ def seven(x):
 
 
 
-print(seven('this song is amazing and not that poor'))
+print(two('qwertyuiop'))
