@@ -15,7 +15,7 @@ def two(q):
         else:
             dict[n] = 1
     return dict
-
+#print(two('rabadaba'))
 #3. Write a Python program to get a string made of the first 2 and last 2 characters of a given string. If the string length is less than 2, return the empty string instead.
 
 def three(z):
@@ -24,7 +24,7 @@ def three(z):
     else:
         x = z[:2] + z[-2:]
     return x 
-
+#print(three('zimbabwe'))
 #4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
 
 def four(x):
@@ -32,14 +32,14 @@ def four(x):
     x = x.replace(char_1, '$')
     x = char_1 + x[1:]
     return x
-
+#print(four('rabarbar'))
 #5. Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.
 
 def five(a, b):
     new_a = b[:2] + a[2:]
     new_b = a[:2] + b[2:]
     return new_a+'   '+new_b
-
+#print(five('qwerty','asdfgh'))
 #6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
 
 def six(a):
@@ -50,7 +50,7 @@ def six(a):
     elif len(a)>4:
         a=a+"ing"
     return a
-
+#print(six('watch'))
 #7. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
 
 def seven(x):
@@ -61,7 +61,7 @@ def seven(x):
     else:
         x = x
         return x
-
+print(seven('The lyrics is not that poor!'))
 #8. Write a Python function that takes a list of words and return the longest word and the length of the longest one.
 
 def eight(x):
@@ -155,5 +155,3 @@ def twelve(x):
         return ''.join(reversed(x))
     
     return x
-
-print(twelve('Ruby'))
