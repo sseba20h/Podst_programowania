@@ -70,15 +70,15 @@ d = {'x': 10, 'y': 20, 'z': 30}
 #n = int(input("Input a number "))
 d = dict()
 
-for x in range(1, n + 1):
-    d[x] = x * x
+#for x in range(1, n + 1):
+#    d[x] = x * x
 
 #print(d)
 
 #7. Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are the square of the keys.
 
-d = dict()
-for x in range(1, 16):
+#d = dict()
+#for x in range(1, 16):
 #    d[x] = x ** 2
 
 #print(d)
@@ -102,16 +102,128 @@ for x in range(1, 16):
 
 #10. Write a Python program to sum all the items in a dictionary.
 
-my_dict = {'data1': 100, 'data2': -54, 'data3': 247}
-result = sum(my_dict.values())
+#my_dict = {'data1': 100, 'data2': -54, 'data3': 247}
+#result = sum(my_dict.values())
 #print(result)
 
 #11. Write a Python program to multiply all the items in a dictionary.
 
-my_dict = {'data1': 100, 'data2': -54, 'data3': 247}
+m_dct = {'data1': 100, 'data2': -54, 'data3': 247}
 result = 1
 
-for key in my_dict:
-    result = result * my_dict[key]
+for key in m_dct:
+    result = result * m_dct[key]
 
-print(result) 
+#print(result)
+
+#12. Write a Python program to remove a key from a dictionary.
+
+myDict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+#print(myDict)
+
+if 'a' in myDict:
+    del myDict['a']
+
+#print(myDict)
+
+#13. Write a Python program to map two lists into a dictionary.
+
+keys = ['red', 'green', 'blue']
+values = ['#FF0000', '#008000', '#0000FF']
+color_dictionary = dict(zip(keys, values))
+
+#print(color_dictionary)
+
+#14. Write a Python program to sort a given dictionary by key
+
+color_dict = {
+    'red': '#FF0000',
+    'green': '#008000',
+    'black': '#000000',
+    'white': '#FFFFFF'
+}
+
+#for key in sorted(color_dict):
+#    print("%s: %s" % (key, color_dict[key]))
+
+#15. Write a Python program to get the maximum and minimum values of a dictionary.
+
+my_dict = {'x': 500, 'y': 5874, 'z': 560}
+key_max = max(my_dict.keys(), key=(lambda k: my_dict[k]))
+key_min = min(my_dict.keys(), key=(lambda k: my_dict[k]))
+
+#print('Maximum Value: ', my_dict[key_max])
+#print('Minimum Value: ', my_dict[key_min])
+
+#16. Write a Python program to get a dictionary from an object's fields.
+
+class dictObj(object):
+    def __init__(self):
+        self.x = 'red'
+        self.y = 'Yellow'
+        self.z = 'Green'
+    
+    def do_nothing(self):
+        pass
+
+test = dictObj()
+
+#print(test.__dict__) 
+
+#17. Write a Python program to remove duplicates from the dictionary.
+
+student_data = {
+    'id1': {
+        'name': ['Sara'],
+        'class': ['V'],
+        'subject_integration': ['english, math, science']
+    },
+    'id2': {
+        'name': ['David'],
+        'class': ['V'],
+        'subject_integration': ['english, math, science']
+    },
+    'id3': {
+        'name': ['Sara'],
+        'class': ['V'],
+        'subject_integration': ['english, math, science']
+    },
+    'id4': {
+        'name': ['Surya'],
+        'class': ['V'],
+        'subject_integration': ['english, math, science']
+    }
+}
+
+result = {}
+
+for key, value in student_data.items():
+    if value not in result.values():
+        result[key] = value
+
+#print(result)
+
+#18. Write a Python program to check if a dictionary is empty or not.
+
+my_dict = {}
+
+# if not bool(my_dict):
+#     print("Dictionary is empty")
+
+#19. Write a Python program to combine two dictionary by adding values for common keys.
+
+from collections import Counter
+
+d1 = {'a': 100, 'b': 200, 'c': 300}
+d2 = {'a': 300, 'b': 200, 'd': 400}
+d = Counter(d1) + Counter(d2)
+
+#print(d)
+
+#20. Write a Python program to print all distinct values in a dictionary.
+
+L = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V": "S009"}, {"VIII": "S007"}]
+#print("Original List: ", L)
+
+u_value = set(val for dic in L for val in dic.values())
+#print("Unique Values: ", u_value)
