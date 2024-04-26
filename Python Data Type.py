@@ -66,8 +66,9 @@ def seven(x):
 
 def eight(x):
     l = x.split(',')
-    l.sort()
-    lenq = len(l[0])
-    return 'Najdłuższy wyraz to: ',l[0],'      A jego długość to: ',lenq
+    l.sort(key=len, reverse=True)
+    longest_word = l[0]
+    length = len(longest_word)
+    return f'Najdłuższy wyraz to: {longest_word}      A jego długość to: {length}'
 
-print(eight('erqwewqe,wqeqwewq,wqeqwe,qweqwe'))
+print(eight('qwe,qqq,qwert,qaz,uytrewewrw'))
