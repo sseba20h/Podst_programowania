@@ -41,4 +41,67 @@ for d in [dict1, dict2, dict3]:
 
 #print(new_dict)
 
-#4. 
+#4. Write a Python script to check whether a given key already exists in a dictionary.
+
+def check_key(key):
+    students = {
+    'Theodore': 19,
+    'Roxanne': 22,
+    'Mathew': 21,
+    'Betty': 20
+}
+
+    if key in students:
+        return print(f'The key {key} exists in the dictionary.')
+    else:
+        return print(f'The key {key} does not exist in the dictionary.')
+
+#check_key('Betty')
+
+#5. Write a Python program to iterate over dictionaries using for loops.
+
+d = {'x': 10, 'y': 20, 'z': 30} 
+
+# for dict_key, dict_value in d.items():
+#     print(dict_key, '->', dict_value)
+
+#6. Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).
+
+#n = int(input("Input a number "))
+d = dict()
+
+for x in range(1, n + 1):
+    d[x] = x * x
+
+#print(d)
+
+#7. Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are the square of the keys.
+
+d = dict()
+for x in range(1, 16):
+    d[x] = x ** 2
+
+#print(d)
+
+#8. Write a Python script to merge two Python dictionaries.
+
+d1 = {'a': 100, 'b': 200}
+d2 = {'x': 300, 'y': 200}
+d = d1.copy()
+
+d.update(d2)
+
+#print(d)
+
+#9. Write a Python program to iterate over dictionaries using for loops.
+
+# d = {'Red': 1, 'Green': 2, 'Blue': 3}
+
+# for color_key, value in d.items():
+#     print(color_key, 'corresponds to ', d[color_key])
+
+#10. Write a Python program to sum all the items in a dictionary.
+
+my_dict = {'data1': 100, 'data2': -54, 'data3': 247}
+result = sum(my_dict.values())
+print(result) 
