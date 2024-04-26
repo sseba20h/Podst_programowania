@@ -49,7 +49,7 @@ def five(words):
             ctr += 1
     return ctr
 
-#print(five(['abc', 'xyz', 'aba', '1221']))
+print(five(['abc', 'xyz', 'aba', '1221']))
 
 #6. Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
 
@@ -194,4 +194,4 @@ x = [(4, 1), (1, 2), (6, 0)]
 n = 5
 l = [{} for _ in range(n)]
 
-print(l)
+#print(l)

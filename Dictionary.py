@@ -67,13 +67,13 @@ d = {'x': 10, 'y': 20, 'z': 30}
 
 #6. Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).
 
-#n = int(input("Input a number "))
+n = int(input("Input a number "))
 d = dict()
 
-#for x in range(1, n + 1):
-#    d[x] = x * x
+for x in range(1, n + 1):
+    d[x] = x * x
 
-#print(d)
+print(d)
 
 #7. Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are the square of the keys.
 
