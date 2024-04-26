@@ -71,4 +71,49 @@ def eight(x):
     length = len(longest_word)
     return f'Najdłuższy wyraz to: {longest_word}      A jego długość to: {length}'
 
-print(eight('qwe,qqq,qwert,qaz,uytrewewrw'))
+#9. Write a Python program to remove the nth index character from a nonempty string.
+
+def nine(x, y):
+    q = x[:y]
+    w = x[y+1:]
+    return q + w
+
+#10. Write a Python program to change a given string to a newly string where the first and last chars have been exchanged.
+
+def ten(x):
+    return x[-1:] + x[1:-1] + x[:1]
+
+#11. Write a Python program to remove characters that have odd index values in a given string.
+
+def eleven(x):
+    result = ""
+    for i in range(len(x)):
+        if i % 2 == 0:
+            result = result + x[i]
+    return result
+
+#12. Write a Python program to count the occurrences of each word in a given sentence.
+
+def twelve(x):
+    y = dict()
+    words = x.split()
+    for words in words:
+        if words in y:
+            y[words] += 1
+        else:
+            y[words] = 1
+    return y
+
+#13. Write a Python script that takes input from the user and displays that input back in upper and lower cases.
+
+#user_input = input("What's your favorite language? ")
+#print("My favorite language is ", user_input.upper())
+#print("My favorite language is ", user_input.lower()) 
+
+#14. Write a Python program that accepts a comma-separated sequence of words as input and prints the distinct words in sorted form (alphanumerically).
+
+items = input("Input comma-separated sequence of words")
+words = [word for word in items.split(",")]
+print(",".join(sorted(list(set(words)))))
+
+#print(twelve('the quick brown fox jumps over the lazy dog.'))
