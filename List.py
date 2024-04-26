@@ -164,4 +164,28 @@ def printElements():
 
 import itertools
 
-print(list(itertools.permutations([1, 2, 3])))
+#print(list(itertools.permutations([1, 2, 3])))
+
+#59. Write a Python program to check whether the n-th element exists in a given list.
+
+def find_nth_element(lst, n):
+    if n < len(lst):
+        return lst[n]
+    else:
+        return None
+
+my_list = [1, 2, 3, 4, 5]
+n = my_list.index(max(my_list))
+
+nth_element = find_nth_element(my_list, n)
+if nth_element is not None:
+    print(f"The {n}-th element in the list is: {nth_element}")
+else:
+    print(f"The {n}-th element does not exist in the list")
+
+#60. Write a Python program to find a tuple, the smallest second index value from a list of tuples.
+
+x = [(4, 1), (1, 2), (6, 0)]
+
+#print(min(x, key=lambda n: (n[1], -n[0])))
+
