@@ -112,8 +112,48 @@ def twelve(x):
 
 #14. Write a Python program that accepts a comma-separated sequence of words as input and prints the distinct words in sorted form (alphanumerically).
 
-items = input("Input comma-separated sequence of words")
-words = [word for word in items.split(",")]
-print(",".join(sorted(list(set(words)))))
+#items = input("Input comma-separated sequence of words ")
+#words = [word for word in items.split(",")]
+#print(",".join(sorted(list(set(words)))))
 
-#print(twelve('the quick brown fox jumps over the lazy dog.'))
+#15. Write a Python function to create an HTML string with tags around the word(s).
+
+def fiveteen(tag, word):
+    return "<%s>%s</%s>" % (tag, word, tag)
+
+#16. Write a Python function to insert a string in the middle of a string.
+
+def sixteen(str, word):
+    return str[:2] + word + str[2:]
+
+#17. Write a Python function to get a string made of 4 copies of the last two characters of a specified string (length must be at least 2).
+
+def seventeen(str):
+    x = str[-2:]
+    return x * 4
+
+#18. Write a Python function to get a string made of the first three characters of a specified string. If the length of the string is less than 3, return the original string.
+
+def eighteen(x):
+    if len(x) > 3:
+        return x[:3]
+    else:
+        return x
+
+#19. Write a Python program to get the last part of a string before a specified character.
+
+def nineteen(x, q):
+#    x = 'https://www.w3resource.com/python-exercises/string'
+#    q = /,-
+    y = x.rsplit(q, 1)[0]
+    return y
+
+#20. Write a Python function to reverse a string if its length is a multiple of 4.
+
+def twelve(x):
+    if len(x) % 4 == 0:
+        return ''.join(reversed(x))
+    
+    return x
+
+print(twelve('Ruby'))
