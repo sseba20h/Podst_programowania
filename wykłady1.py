@@ -1,5 +1,5 @@
-a = input
-b = input
+a = input('Podaj pierwszą liczbę:')
+b = input('Podaj drugą liczbę:')
 
 # Convert the inputs to integers before doing addition
 a = int(a)
