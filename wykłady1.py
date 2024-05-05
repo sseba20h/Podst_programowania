@@ -1,5 +1,5 @@
 a = input
-b = 
+b = input
 
 # Convert the inputs to integers before doing addition
 a = int(a)
