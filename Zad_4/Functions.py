@@ -118,5 +118,21 @@ def is_pangram(s):
     else:
         return "Not a pangram."
 
-print(is_pangram("The quick brown fox jumps over the lazy dog"))
-print(is_pangram("Hello world"))
+#print(is_pangram("The quick brown fox jumps over the lazy dog"))
+#print(is_pangram("Hello world"))
+
+#
+# items = [n for n in input().split('-')]
+# items.sort()
+
+# print('-'.join(items))
+
+def printValues():
+    l = list()
+    
+    for i in range(1, 21):
+        l.append(i**2)
+    
+    print(l)
+
+printValues() 
