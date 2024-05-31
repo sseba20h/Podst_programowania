@@ -181,4 +181,58 @@ def abc():
     
     print("Python Exercises")
 
-print(abc.__code__.co_nlocals) 
+#print(abc.__code__.co_nlocals) 
+
+def string_test(s):
+    d = {"UPPER_CASE": 0, "LOWER_CASE": 0}
+    
+    for c in s:
+        if c.isupper():
+            d["UPPER_CASE"] += 1
+        elif c.islower():
+            d["LOWER_CASE"] += 1
+        else:
+            pass
+    
+#     print("Original String: ", s)
+    
+#     print("Number of Upper case characters: ", d["UPPER_CASE"])
+    
+#     print("Number of Lower case Characters: ", d["LOWER_CASE"])
+
+# string_test('The quick Brown Fox')
+
+def perfect_number(n):
+    sum = 0
+    
+    for x in range(1, n):
+        if n % x == 0:
+            sum += x
+    
+    return sum == n
+
+#print(perfect_number(6))
+
+def make_bold(fn):
+    def wrapped():
+        return "<b>" + fn() + "</b>"
+    return wrapped
+
+def make_italic(fn):
+    def wrapped():
+        return "<i>" + fn() + "</i>"
+    return wrapped
+
+def make_underline(fn):
+    def wrapped():
+        return "<u>" + fn() + "</u>"
+    return wrapped
+
+@make_bold
+@make_italic
+@make_underline
+def hello():
+    return "hello world"
+
+
+print(hello())
