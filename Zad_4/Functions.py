@@ -131,8 +131,54 @@ def printValues():
     l = list()
     
     for i in range(1, 21):
-        l.append(i**2)
-    
+        l.append(i**2)   
     print(l)
 
-printValues() 
+#printValues()
+
+mycode = 'print("hello world")'
+
+code = """
+def sum(x,y):
+    return x+y
+
+print('Sum of 2 and 3 is: ',sum(2,3))
+"""
+
+#exec(mycode)
+#exec(code)
+
+def test(a):
+    def add(b):
+        nonlocal a
+        a += 1
+        return a + b
+    return add
+func = test(4)
+
+#print(func(4))
+
+# from time import sleep
+# import math
+
+def delay(fn, ms, *args):
+    sleep(ms / 1000)
+    
+    return fn(*args)
+
+# print("Square root after specific milliseconds:") 
+
+# print(delay(lambda x: math.sqrt(x), 100, 16))
+
+# print(delay(lambda x: math.sqrt(x), 1000, 100))
+
+# print(delay(lambda x: math.sqrt(x), 2000, 25100))
+
+def abc():
+    x = 1
+    y = 2
+    str1 = "w3resource"
+    
+    print("Python Exercises")
+
+print(abc.__code__.co_nlocals) 
