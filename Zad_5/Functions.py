@@ -69,7 +69,7 @@ def distinct_elements(*args):
             seen[element] = True
     return result
 
-print(distinct_elements(1 ,1 ,2 , 55, 55, 4, 2))
+#print(distinct_elements(1 ,1 ,2 , 55, 55, 4, 2))
 
 def prime(*numbers):
     def is_prime(n):
