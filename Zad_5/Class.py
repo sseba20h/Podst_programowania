@@ -247,29 +247,241 @@
 
 # print(py_solution().reverse_words('hello .py'))
 #9
-class IOString():
-    def __init__(self):
-        self.str1 = ""
+# class IOString():
+#     def __init__(self):
+#         self.str1 = ""
 
-    def get_String(self):
-        self.str1 = input()
+#     def get_String(self):
+#         self.str1 = input()
 
-    def print_String(self):
-        print(self.str1.upper())
+#     def print_String(self):
+#         print(self.str1.upper())
 
-str1 = IOString()
-str1.get_String()
-str1.print_String()
+# str1 = IOString()
+# str1.get_String()
+# str1.print_String()
 #10
+# class Rectangle():
+#     def __init__(self, l, w):
+#         self.length = l
+#         self.width  = w
 
+#     def rectangle_area(self):
+#         return self.length*self.width
+
+# newRectangle = Rectangle(12, 10)
+# print(newRectangle.rectangle_area())
 #11
+# class Circle():
+#     def __init__(self, r):
+#         self.radius = r
 
+#     def area(self):
+#         return self.radius**2*3.14
+    
+#     def perimeter(self):
+#         return 2*self.radius*3.14
+
+# NewCircle = Circle(8)
+# print(NewCircle.area())
+# print(NewCircle.perimeter())
 #12
-
+# import itertools
+# x = itertools.cycle('ABCD')
+# print(type(x).__name__)
 #1
+# class Employee:
+#     def __init__(self, name, emp_id, salary, department):
+#         self.name = name
+#         self.id = emp_id
+#         self.salary = salary
+#         self.department = department
 
+#     def calculate_salary(self, salary, hours_worked):
+#         overtime = 0
+#         if hours_worked > 50:
+#             overtime = hours_worked - 50
+#         self.salary = self.salary + (overtime * (self.salary / 50))
+
+#     def assign_department(self, emp_department):
+#         self.department = emp_department
+
+#     def print_employee_details(self):
+#         print("\nName: ", self.name)
+#         print("ID: ", self.id)
+#         print("Salary: ", self.salary)
+#         print("Department: ", self.department)
+#         print("----------------------")
+
+
+# employee1 = Employee("ADAMS", "E7876", 50000, "ACCOUNTING")
+# employee2 = Employee("JONES", "E7499", 45000, "RESEARCH")
+# employee3 = Employee("MARTIN", "E7900", 50000, "SALES")
+# employee4 = Employee("SMITH", "E7698", 55000, "OPERATIONS")
+
+# print("Original Employee Details:")
+# employee1.print_employee_details()
+# employee2.print_employee_details()
+# employee3.print_employee_details()
+# employee4.print_employee_details()
+
+# # Change the departments of employee1 and employee4
+# employee1.assign_department("OPERATIONS")
+# employee4.assign_department("SALES")
+
+# # Now calculate the overtime of the employees who are eligible:
+# employee2.calculate_salary(45000, 52)
+# employee4.calculate_salary(45000, 60)
+
+# print("Updated Employee Details:")
+# employee1.print_employee_details()
+# employee2.print_employee_details()
+# employee3.print_employee_details()
+# employee4.print_employee_details()
 #2
+# class Restaurant:
+#     def __init__(self):
+#         self.menu_items = {}
+#         self.book_table = []
+#         self.customer_orders = []
 
+#     def add_item_to_menu(self, item, price):
+#         self.menu_items[item] = price
+
+#     def book_tables(self, table_number):
+#         self.book_table.append(table_number)
+
+#     def customer_order(self, table_number, order):
+#         order_details = {'table_number': table_number, 'order': order}
+#         self.customer_orders.append(order_details)
+
+#     def print_menu_items(self):
+#         for item, price in self.menu_items.items():
+#             print("{}: {}".format(item, price))
+
+#     def print_table_reservations(self):
+#         for table in self.book_table:
+#             print("Table {}".format(table))
+
+#     def print_customer_orders(self):
+#         for order in self.customer_orders:
+#             print("Table {}: {}".format(order['table_number'], order['order']))
+
+# restaurant = Restaurant()
+
+# # Add items
+# restaurant.add_item_to_menu("Cheeseburger", 9.99)
+# restaurant.add_item_to_menu("Caesar Salad", 8)
+# restaurant.add_item_to_menu("Grilled Salmon", 19.99)
+# restaurant.add_item_to_menu("French Fries", 3.99)
+# restaurant.add_item_to_menu("Fish & Chips:", 15)
+# # Book table
+# restaurant.book_tables(1)
+# restaurant.book_tables(2)
+# restaurant.book_tables(3)
+# # Order items
+# restaurant.customer_order(1, "Cheeseburger")
+# restaurant.customer_order(1, "Grilled Salmon")
+# restaurant.customer_order(2, "Fish & Chips")
+# restaurant.customer_order(2, "Grilled Salmon")
+
+# print("\nPopular dishes in the restaurant along with their prices:")
+# restaurant.print_menu_items()
+# print("\nTable reserved in the Restaurant:")
+# restaurant.print_table_reservations()
+# print("\nPrint customer orders:")
+# restaurant.print_customer_orders()
 #3
+# class BankAccount:
+#     def __init__(self, account_number, date_of_opening, balance, customer_name):
+#         self.account_number = account_number
+#         self.date_of_opening  = date_of_opening 
+#         self.balance = balance
+#         self.customer_name = customer_name
+        
+#     def deposit(self, amount):
+#         self.balance += amount
+#         print(f"${amount} has been deposited in your account.")
+    
+#     def withdraw(self, amount):
+#         if amount > self.balance:
+#             print("Insufficient balance.")
+#         else:
+#             self.balance -= amount
+#             print(f"${amount} has been withdrawn from your account.")
+            
+#     def check_balance(self):
+#         print(f"Current balance is ${self.balance}.")
+        
+#     def print_customer_details(self):
+#         print("Name:", self.customer_name)
+#         print("Account Number:", self.account_number)
+#         print("Date of opening:", self.date_of_opening)
+#         print(f"Balance: ${self.balance}\n")   
 
+# # Input customer details
+# ac_no_1 = BankAccount(2345, "01-01-2011", 1000, "Toninho Takeo")
+# ac_no_2 = BankAccount(1234, "11-03-2011", 2000, "Astrid Rugile")
+# ac_no_3 = BankAccount(2312, "12-01-2009", 3000, "Orli Kerenza")
+# ac_no_4 = BankAccount(1395, "01-01-2011", 3000, "Luciana Chika")
+# ac_no_5 = BankAccount(6345, "01-05-2011", 4000, "Toninho Takeo")
+
+# print("Customer Details:")
+# ac_no_1.print_customer_details()
+# ac_no_2.print_customer_details()
+# ac_no_3.print_customer_details()
+# ac_no_4.print_customer_details()
+# ac_no_5.print_customer_details()
+
+# print("=============================")
+# ac_no_4.print_customer_details()
+# # Current balance is $3000.
+# # $1000 has been deposited in your account.
+# ac_no_4.deposit(1000)
+# ac_no_4.check_balance()
+# # Your current balance $4000.
+# # You want to withdraw $5000
+# ac_no_4.withdraw(5000)
+# # Output:
+# # Insufficient balance.
+# #The customer withdraw $3400.
+# ac_no_4.withdraw(3400)
+# ac_no_4.check_balance()
 #4
+class Inventory:
+    def __init__(self):
+        self.inventory = {}
+    def add_item(self, item_id, item_name, stock_count, price):
+        self.inventory[item_id] = {"item_name": item_name, "stock_count": stock_count, "price": price}
+
+    def update_item(self, item_id, stock_count, price):
+        if item_id in self.inventory:
+            self.inventory[item_id]["stock_count"] = stock_count
+            self.inventory[item_id]["price"] = price
+        else:
+            print("Item not found in inventory.")
+
+    def check_item_details(self, item_id):
+        if item_id in self.inventory:
+            item = self.inventory[item_id]
+            return f"Product Name: {item['item_name']}, Stock Count: {item['stock_count']}, Price: {item['price']}"
+        else:
+            return "Item not found in inventory."
+
+inventory = Inventory()
+
+inventory.add_item("I001", "Laptop", 100, 500.00)
+inventory.add_item("I002", "Mobile", 110, 450.00)
+inventory.add_item("I003", "Desktop", 120, 500.00)
+inventory.add_item("I004", "Tablet", 90, 550.00)
+print("Item Details:")
+print(inventory.check_item_details("I001"))
+print(inventory.check_item_details("I002"))
+print(inventory.check_item_details("I003"))
+print(inventory.check_item_details("I004"))
+print("\nUpdate the price of item code - 'I001':")
+inventory.update_item("I001", 100, 505.00)
+print(inventory.check_item_details("I001"))
+print("\nUpdate the stock of item code - 'I003':")
+inventory.update_item("I003", 115, 500.00)
+print(inventory.check_item_details("I003"))
