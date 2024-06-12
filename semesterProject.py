@@ -81,8 +81,8 @@ def draw_hangman(chances):
     print(stages[8-chances])
 
 someWords = '''apple banana mango strawberry  
-orange grape pineapple apricot lemon coconut watermelon 
-cherry papaya berry peach lychee muskmelon'''
+orange grape pineapple lemon coconut watermelon 
+cherry papaya berry peach lychee'''
 
 someWords = someWords.split(' ') 
 # randomly choose a secret word from our "someWords" LIST. 
